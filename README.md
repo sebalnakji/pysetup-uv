@@ -34,14 +34,14 @@ uv tool install git+https://github.com/sebalnakji/pysetup-uv
 pysetup
 ```
 
-**메뉴**
+### 1. 메뉴
 
 | 번호 | 기능             | 설명                                                  |
 | ---- | ---------------- | ----------------------------------------------------- |
 | 1    | 환경구성         | 가상환경 생성 + 프로젝트 파일 생성 + `uv sync`        |
 | 2    | Python 버전 변경 | 기존 `.venv` 삭제 후 지정 버전으로 재생성 + `uv sync` |
 
-**생성되는 파일**
+### 2. 생성되는 파일
 
 | 파일                    | 설명                    |
 | ----------------------- | ----------------------- |
@@ -55,7 +55,7 @@ pysetup
 
 > 이미 존재하는 파일은 덮어쓰지 않습니다.
 
-**패키지 관리**
+### 3. 패키지 관리
 
 ```powershell
 uv add requests      # 패키지 추가
@@ -75,7 +75,7 @@ uv tool upgrade pysetup-uv
 
 ## 🔧 트러블슈팅
 
-### `pysetup` 명령어를 인식하지 못하는 경우
+### 1. `pysetup` 명령어를 인식하지 못하는 경우
 
 **원인:** `C:\Users\<username>\.local\bin`이 PATH에 등록되지 않은 경우
 
@@ -89,9 +89,7 @@ uv tool upgrade pysetup-uv
 $env:PATH = [Environment]::GetEnvironmentVariable("PATH", "User") + ";" + [Environment]::GetEnvironmentVariable("PATH", "Machine")
 ```
 
-<br>
-
-### VS Code 터미널에서 인식하지 못하는 경우
+### 2. VS Code 터미널에서 인식하지 못하는 경우
 
 **원인:** VS Code 터미널이 환경변수 변경을 즉시 반영하지 못하는 경우
 
