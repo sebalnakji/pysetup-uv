@@ -1,0 +1,16 @@
+[project]
+name = "pysetup-uv"
+version = "0.1.0"
+description = "uv 기반 Python 개발환경 자동 구성 CLI 도구 (Windows)"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+pysetup = "pysetup_uv.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
