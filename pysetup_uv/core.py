@@ -40,7 +40,7 @@ def create_project_files(python_ver: str) -> None:
         "pyproject.toml",
         f'[project]\nname = "my-project"\nversion = "0.1.0"\nrequires-python = ">={python_ver}"\ndependencies = []\n',
     )
-    _write_if_not_exists(".gitignore", ".venv/\n__pycache__/\n*.pyc\n.env\ndist/\nbuild/\n")
+    _write_if_not_exists(".gitignore", ".venv/\n__pycache__/\n.env\n")
     _write_if_not_exists(".env", "")
     _write_if_not_exists("README.md", "# 프로젝트 이름\n")
     _mkdir_if_not_exists("src")
