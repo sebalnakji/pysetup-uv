@@ -38,7 +38,7 @@ def sync_packages() -> None:
 def create_project_files(python_ver: str) -> None:
     _write_if_not_exists(
         "pyproject.toml",
-        f'[project]\nname = "my-project"\nversion = "0.1.0"\nrequires-python = ">={python_ver}"\ndependencies = []\n\n[build-system]\nrequires = ["hatchling"]\nbuild-backend = "hatchling.build"\n',
+        f'[project]\nname = "my-project"\nversion = "0.1.0"\nrequires-python = ">={python_ver}"\ndependencies = []\n',
     )
     _write_if_not_exists(".gitignore", ".venv/\n__pycache__/\n*.pyc\n.env\ndist/\nbuild/\n")
     _write_if_not_exists(".env", "")
