@@ -10,7 +10,7 @@ uv 기반 Python 개발환경을 빠르게 구성하는 CLI 도구입니다. (Wi
 ## 설치
 
 ```bash
-uv tool install git+https://github.com/<your-username>/pysetup-uv
+uv tool install git+https://github.com/sebalnakji/pysetup-uv
 ```
 
 ## 업데이트
