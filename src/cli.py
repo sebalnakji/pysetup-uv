@@ -15,15 +15,16 @@ def main() -> None:
     console.print("  [white][2] Python 버전 변경 - 기존 .venv 삭제 후 재생성[/white]\n")
 
     choice = Prompt.ask("선택", choices=["1", "2"])
-    python_ver = Prompt.ask(f"🐍 Python 버전 (엔터 = {DEFAULT_PYTHON})", default=DEFAULT_PYTHON)
 
     if choice == "1":
+        python_ver = Prompt.ask(f"\n🐍 Python 버전 (엔터 = {DEFAULT_PYTHON})", default=DEFAULT_PYTHON)
         core.create_venv(python_ver)
         core.create_project_files(python_ver)
         core.sync_packages()
         console.print("\n[cyan]🎉 환경구성 완료! VS Code를 재실행하거나 터미널을 다시 여세요.[/cyan]")
 
     elif choice == "2":
+        python_ver = Prompt.ask(f"\n🐍 Python 버전 (엔터 = {DEFAULT_PYTHON})", default=DEFAULT_PYTHON)
         core.remove_venv()
         core.create_venv(python_ver)
         core.sync_packages()
